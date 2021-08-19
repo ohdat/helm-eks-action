@@ -13,6 +13,6 @@ outputs:
 runs:
   using: "docker"
   #image: "Dockerfile"
-  image: "ohdat123/helm-deploy:v1"
+  image: "docker://ohdat123/helm-deploy:v1"
   args:
     - ${{ inputs.command }}
