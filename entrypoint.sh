@@ -9,4 +9,5 @@ echo "running entrypoint command(s)"
 
 response=$(sh -c " $*")
 
-echo "::set-output name=response::$response"
+#echo "::set-output name=response::$response"
+echo "response=$response" >> $GITHUB_OUTPUT
