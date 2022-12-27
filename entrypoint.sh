@@ -7,7 +7,10 @@ export KUBECONFIG="${PWD}/kubeconfig"
 
 echo "running entrypoint command(s)"
 
-message=$(sh -c " $*")
-response=$(echo $message | tr '\n' ' ')
+#response=$(sh -c " $*")
 #echo "::set-output name=response::$response"
-echo "response=$response" >> $GITHUB_OUTPUT
+#echo "response=$response" >> $GITHUB_OUTPUT
+
+echo "response<<EOF" >> $GITHUB_OUTPUT
+echo "$(sh -c "$*")" >> $GITHUB_OUTPUT
+echo "EOF" >> $GITHUB_OUTPUT
