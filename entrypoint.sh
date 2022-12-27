@@ -8,6 +8,5 @@ export KUBECONFIG="${PWD}/kubeconfig"
 echo "running entrypoint command(s)"
 
 response=$(sh -c " $*")
-response=$(echo $response | tr '\n' ' ')
 #echo "::set-output name=response::$response"
-echo "response=$response" >> $GITHUB_OUTPUT
+echo -e "response=$response" >> $GITHUB_OUTPUT
