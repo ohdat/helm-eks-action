@@ -12,6 +12,6 @@ outputs:
     description: "Output returned by your Helm or kubectl command"
 runs:
   using: "docker"
-  image: "docker://ohdat123/helm-deploy:v1"
+  image: "docker://ohdat123/helm-deploy:latest"
   args:
     - ${{ inputs.command }}
